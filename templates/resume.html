@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="content">
+    <h1>Resume</h1>
+    <p><a href="{{ url_for('static', filename='resume.pdf') }}" download>Download Resume (PDF)</a></p>
+</section>
+{% endblock %}

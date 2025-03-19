@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pukar Bhatta | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/resume">Resume</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 50 },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 6, "random": true },
+                "move": { "direction": "top", "speed": 1, "out_mode": "out" },
+                "color": { "value": "#00ffff" },
+                "line_linked": { "enable": false }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "bubble" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "bubble": { "size": 10, "opacity": 0.8 },
+                    "push": { "particles_nb": 5 }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
